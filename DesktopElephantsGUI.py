@@ -16,7 +16,9 @@ polish_text = [
     'Nie kończ',
     'Argumenty:',
     'Kopiuj',
-    'Skopiowano'
+    'Skopiowano',
+    'Błąd',
+    'Wprowadzono błędne dane!'
 ]
 
 english_text = [
@@ -27,7 +29,9 @@ english_text = [
     'Don\'t end',
     'Arguments',
     'Copy',
-    'Copied'
+    'Copied',
+    'Error',
+    'Entered incorrect data'
 ]
 
 
@@ -84,7 +88,7 @@ def start():
         delay = float(delay_var.get()) if delay_var.get() != '' else None
         end = float(end_var.get()) if end_var.get() != '' else None
     except Exception:
-        messagebox.showerror('Błąd', 'Wprowadzono błędne dane!')
+        messagebox.showerror(get_text(8), get_text(9))
     else:
         window.destroy()
         DesktopElephants.args = Args(number, delay, end)
