@@ -8,29 +8,6 @@ import os
 import argparse
 
 
-parser = argparse.ArgumentParser(add_help=False)
-parser.add_argument('-h', '--help', action='store_true')
-parser.add_argument('-n', '--number', type=int, required=False,
-                    default=1, help='Number of elephants')
-parser.add_argument('-d', '--delay', type=float, required=False,
-                    default=2, help='Delay of changing position in seconds')
-# parser.add_argument('-dm', '--dont-move', action='store_true')
-args = parser.parse_args()
-
-help_message = \
-    '''Options:
--h, --help
-\tShow this help message and exit
--n NUMBER, --number NUMBER
-\tNumber of elephants
--d DELAY, --delay DELAY
-\tDelay of changing position in seconds'''
-
-if args.help:
-    messagebox.showinfo("Help", help_message)
-    sys.exit(0)
-
-
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
     try:
@@ -63,10 +40,17 @@ class ElephantWindow:
         x, y = random.randint(0, self.m.width - 300), \
             random.randint(0, self.m.height - 200)
         self.window.geometry(f'+{x}+{y}')
-        self.window.after(int(args.delay * 1000), self.change_window_position)
+        if args.delay is not None:
+            self.window.after(int(args.delay * 1000),
+                              self.change_window_position)
+
+    def end(self):
+        self.window.destroy()
 
     def start(self):
         self.change_window_position()
+        if args.end is not None:
+            self.window.after(int(args.end * 1000), self.end)
         self.window.mainloop()
 
 
@@ -91,13 +75,47 @@ class ElephantWindowToplevel:
         x, y = random.randint(0, self.m.width - 300), \
             random.randint(0, self.m.height - 200)
         self.window.geometry(f'+{x}+{y}')
-        self.window.after(int(args.delay * 1000), self.change_window_position)
+        if args.delay is not None:
+            self.window.after(int(args.delay * 1000),
+                              self.change_window_position)
+
+    def end(self):
+        self.window.destroy()
 
     def start(self):
         self.change_window_position()
+        if args.end is not None:
+            self.window.after(int(args.end * 1000), self.end)
 
 
-e = ElephantWindow()
-for _ in range(args.number - 1):
-    ElephantWindowToplevel().start()
-e.start()
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument('-h', '--help', action='store_true')
+    parser.add_argument('-n', '--number', type=int, required=False,
+                        default=1, help='Number of elephants')
+    parser.add_argument('-d', '--delay', type=float, required=False,
+                        help='Delay of changing position in seconds')
+    parser.add_argument('-e', '--end', type=float, required=False,
+                        help='End after this time in seconds')
+    args = parser.parse_args()
+
+    help_message = \
+        '''Options:
+    -h, --help
+    \tShow this help message and exit
+    -n NUMBER, --number NUMBER
+    \tNumber of elephants, default: 1
+    -d DELAY, --delay DELAY
+    \tDelay of changing position in seconds, default: none
+    -e END, --end END
+    \tEnd after this time in seconds, default: none'''
+
+    if args.help:
+        messagebox.showinfo("Help", help_message)
+        sys.exit(0)
+
+    e = [ElephantWindow()]
+    for _ in range(args.number - 1):
+        e.append(ElephantWindowToplevel())
+        e[-1].start()
+    e[0].start()

@@ -10,4 +10,11 @@ Polish version of README file is available [here](README_PL.md).
 ---
 
 ## Command line arguments
-Program has command line arguments. Use `-h` or `--help` to display them.
+**-h, --help** \
+Show help message \
+**-n NUMBER, --number NUMBER** \
+Number of elephants, default: 1 \
+**-d DELAY, --delay DELAY** \
+Delay of changing position in seconds, default: none \
+**-e END, --end END** \
+End after this time in seconds, default: none
