@@ -88,7 +88,9 @@ class ElephantWindowToplevel:
             self.window.after(int(args.end * 1000), self.end)
 
 
-if __name__ == '__main__':
+def main():
+    global args
+
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument('-h', '--help', action='store_true')
     parser.add_argument('-n', '--number', type=int, required=False,
@@ -119,3 +121,7 @@ if __name__ == '__main__':
         e.append(ElephantWindowToplevel())
         e[-1].start()
     e[0].start()
+
+
+if __name__ == '__main__':
+    main()

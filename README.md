@@ -9,7 +9,10 @@ Polish version of README file is available [here](README_PL.md).
 
 ---
 
-## Command line arguments
+## CLI
+File with CLI support is `DesktopElephants`.
+
+### Command line arguments
 **-h, --help** \
 Show help message \
 **-n NUMBER, --number NUMBER** \
@@ -18,3 +21,7 @@ Number of elephants, default: 1 \
 Delay of changing position in seconds, default: none \
 **-e END, --end END** \
 End after this time in seconds, default: none
+
+## GUI
+File with GUI support is `DesktopElephantsGUI`. \
+Command line arguments are not available in GUI version.
