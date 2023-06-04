@@ -1,6 +1,6 @@
 # Desktop Elephants
 
-A program that displays elephants on the desktop.
+A program that displays elephants on the desktop. \
 This programs works only on Windows.
 
 ---
