@@ -1,7 +1,8 @@
 # Desktop Elephants
 
 A program that displays elephants on the desktop. \
-This programs works only on Windows.
+This programs works only on Windows. \
+The program is available in English and Polish.
 
 ---
 

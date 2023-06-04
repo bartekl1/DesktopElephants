@@ -1,6 +1,7 @@
 # Desktop Elephants
 Program, który wyświetla słonie na pulpicie. \
-Program działa tylko na systemie Windows.
+Program działa tylko na systemie Windows. \
+Program jest dostępny po polsku i po angielsku.
 
 ---
 
