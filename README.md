@@ -1,5 +1,11 @@
 # Desktop Elephants
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/slonindyjski/DesktopElephants?style=flat-square)
+![GitHub all releases](https://img.shields.io/github/downloads/slonindyjski/DesktopElephants/total?style=flat-square)
+![GitHub Repo stars](https://img.shields.io/github/stars/slonindyjski/DesktopElephants?style=flat-square)
+![GitHub watchers](https://img.shields.io/github/watchers/slonindyjski/DesktopElephants?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/slonindyjski/DesktopElephants?style=flat-square)
+
 A program that displays elephants on the desktop. \
 This programs works only on Windows. \
 The program is available in English and Polish.
