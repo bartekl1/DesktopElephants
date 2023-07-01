@@ -1,10 +1,10 @@
 # Desktop Elephants
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/barteklorenc/DesktopElephants?style=flat-square)
-![GitHub all releases](https://img.shields.io/github/downloads/barteklorenc/DesktopElephants/total?style=flat-square)
-![GitHub Repo stars](https://img.shields.io/github/stars/barteklorenc/DesktopElephants?style=flat-square)
-![GitHub watchers](https://img.shields.io/github/watchers/barteklorenc/DesktopElephants?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/barteklorenc/DesktopElephants?style=flat-square)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/bartekl1/DesktopElephants?style=flat-square)
+![GitHub all releases](https://img.shields.io/github/downloads/bartekl1/DesktopElephants/total?style=flat-square)
+![GitHub Repo stars](https://img.shields.io/github/stars/bartekl1/DesktopElephants?style=flat-square)
+![GitHub watchers](https://img.shields.io/github/watchers/bartekl1/DesktopElephants?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/bartekl1/DesktopElephants?style=flat-square)
 
 A program that displays elephants on the desktop. \
 This programs works only on Windows. \
